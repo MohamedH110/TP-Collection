@@ -1,0 +1,41 @@
+package tdd3;
+import java.util.Scanner;
+public class calculmoyenne {
+
+	public static void main(String [] args) {
+	int nb=0;
+    float[] notectrl=new float[nb];
+    float[] noteexam=new float[nb];
+    
+ 
+	
+    
+    
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Saisissez la taille du tableau");
+    int n = sc.nextInt();
+   
+    
+    
+   if (n > tab.nmax && n<=0) {
+        System.out.println("n doit etre positif et < nmax ");
+        
+    }else {tab.remplir(notectrl);
+     tab.remplir(noteexam);}
+	
+
+
+
+
+
+}
+	
+	
+	
+
+	
+	
+}
+	
+	
+	

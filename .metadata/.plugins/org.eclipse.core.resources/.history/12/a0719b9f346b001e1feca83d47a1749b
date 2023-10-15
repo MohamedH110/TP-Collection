@@ -1,0 +1,23 @@
+package tdd3;
+
+public class dictionnaire {
+  private int nbmots;
+  private motdico[] dico;
+  private String nom;
+  
+       dictionnaire() {
+	       dico=new motdico[nbmots];
+	       this.nom="";
+      }
+       
+       public void ajoutermot(motdico m) {
+           if (nbmots < dico.length) {
+               dico[nbmots] = m;
+               nbmots++;
+           } else {
+               System.out.println("dictionnaire plein");
+           }
+       }
+      
+      
+}

@@ -1,0 +1,30 @@
+package tdd3;
+import java.util.Scanner;
+public class calculmoyenne {
+
+	public static void main(String [] args) {
+	int nb;
+    float[] notectrl=new float[tab.nmax];
+    float[] noteexam=new float[tab.nmax];
+    
+     tab.remplir(notectrl);
+     tab.remplir(noteexam);
+	
+     tab.lister(notectrl);
+     tab.lister(noteexam);
+     
+
+
+
+
+}
+	
+	
+	
+
+	
+	
+}
+	
+	
+	

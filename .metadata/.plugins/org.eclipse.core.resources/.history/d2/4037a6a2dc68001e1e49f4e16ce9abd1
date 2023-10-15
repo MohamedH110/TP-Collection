@@ -1,0 +1,53 @@
+package vehicule;
+
+public class agencemobilere {
+     int max;
+     int nb;
+      private vehicule[] tab;
+     
+      agencemobilere(int max) {
+		this.max=max;  
+    	tab=new vehicule[max];
+		  
+	}
+
+    
+    
+    
+    void ajoutvehicule(vehicule v) {
+    	if (nb<max) {
+    		tab[nb-1]=v;
+    		nb++;
+    	
+    	}
+    	else {System.out.println("pas de place dans le tableau");}
+    	
+    }
+
+   
+    void selection(int n) {
+    	if (n<nb) {
+    		System.out.println(tab[n-1].decrisvehicule());
+    	}
+    	else {System.out.println("vehicule n existe pas");}
+    }
+
+
+
+    
+    
+    
+    
+ public static void main(String[] args) {
+	vehicule v1 = new vehicule("audi","a7",2018,20000);
+	System.out.println(v1.decrisvehicule());
+	System.out.println(v1.getprix()+v1.getmarque());
+	
+	agencemobilere ag=new agencemobilere(5);
+	
+	
+}
+
+
+
+}

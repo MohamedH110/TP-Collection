@@ -1,0 +1,110 @@
+package vehicule;
+
+public class agencemobilere {
+     int max;
+     int nb;
+      private vehicule[] tab;
+     
+      agencemobilere(int max) {
+		this.max=max;  
+    	tab=new vehicule[max];
+		  
+	}
+
+    
+    
+    
+    void ajoutvehicule(vehicule v) {
+    	if (nb<max) {
+    		tab[nb]=v;
+    		nb++;
+    	
+    	}
+    	else {System.out.println("pas de place dans le tableau");}
+    	
+    }
+
+   
+    void selection(int n) {
+    	if (n<nb && n>=0) {
+    		System.out.println(tab[n].decrisvehicule());
+    	}
+    	else {System.out.println("vehicule n existe pas");}
+    }
+
+
+
+    
+    int getnb() {
+    	return this.nb;
+    }
+    
+    
+    
+    void selection(String mq) {
+    	int a=0;
+    	for (int i=0;i<nb;i++) {
+    		if(tab[i].getmarque()==mq) {
+    			System.out.println(tab[i].decrisvehicule());
+    			a++;
+    		}
+    	}if (a==0) {
+    		System.out.println("marque n existe pas");
+    	}
+    	
+    }
+    
+    
+    
+    void selection(Double px) {
+      
+    	int a=0;
+    	for (int i=0;i<nb;i++) {
+    		if(tab[i].getprix()<=px) {
+    			System.out.println(tab[i].decrisvehicule());
+    			a++;
+    		}
+    		
+    	}
+    	
+    	
+    }    
+    
+    
+    
+    
+    
+    void ancien() {
+    	int ind=0;
+    	int min=tab[0].getannee();
+    	for (int i=1;i<nb;i++) {
+    		if (tab[i].getannee() <min) {
+    			min=tab[i].getannee();
+    			ind=i;
+    		}
+    	}
+    	System.out.println("la voiture la plus ancienne est"+tab[ind].decrisvehicule());
+    }
+    
+    
+    
+ public static void main(String[] args) {
+	vehicule v = new vehicule("Clio","Classique",2000 ,20000);
+	vehicule w = new vehicule("Mercedes","Fantôme", 2008 ,60000);
+	vehicule x = new vehicule("KIA","Picanto",2012,35000);
+	
+	
+	
+	agencemobilere ag=new agencemobilere(5);
+	ag.ajoutvehicule(v);
+	ag.ajoutvehicule(w);
+	ag.ajoutvehicule(x);
+
+	ag.selection(40000.00);
+	
+	
+}
+
+
+
+}
